@@ -208,6 +208,95 @@ export default function Home() {
           `}</style>
         </section>
 
+        {/* Team Section - People with Fluent Gradients */}
+        <section className="py-24 bg-white relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-yellow-100/30 to-transparent rounded-full blur-3xl -z-10"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-r from-green-100/30 to-transparent rounded-full blur-3xl -z-10"></div>
+          
+          <div className="container max-w-7xl mx-auto px-4 relative z-10">
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <h2 className="text-5xl font-bold text-gray-900 mb-6">Nosso Time</h2>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Profissionais apaixonados por inovação, tecnologia e transformação digital. Juntos, criamos o futuro.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  name: "Liderança Tecnológica",
+                  role: "Visão Estratégica",
+                  image: "/manus-storage/team-member-1_4ecaeb78.png",
+                  gradientFrom: "#FFC300",
+                  gradientTo: "#00BEFF"
+                },
+                {
+                  name: "Desenvolvimento",
+                  role: "Inovação Constante",
+                  image: "/manus-storage/team-member-2_5988473f.png",
+                  gradientFrom: "#FFE800",
+                  gradientTo: "#7DFF37"
+                },
+                {
+                  name: "Colaboração",
+                  role: "Trabalho em Equipe",
+                  image: "/manus-storage/team-member-3_bb3d91b9.png",
+                  gradientFrom: "#00FFFF",
+                  gradientTo: "#006EE6"
+                },
+                {
+                  name: "Consultoria",
+                  role: "Transformação Digital",
+                  image: "/manus-storage/team-member-4_f9bb2705.png",
+                  gradientFrom: "#7DFF37",
+                  gradientTo: "#00AA14"
+                }
+              ].map((member, idx) => (
+                <div
+                  key={idx}
+                  className="group relative"
+                  style={{
+                    animation: `fadeInUp 0.8s ease-out ${idx * 0.15}s both`
+                  }}
+                >
+                  {/* Gradient border effect */}
+                  <div
+                    className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"
+                    style={{
+                      background: `linear-gradient(135deg, ${member.gradientFrom}, ${member.gradientTo})`,
+                      zIndex: -1
+                    }}
+                  ></div>
+                  
+                  {/* Card */}
+                  <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6">
+                    {/* Image container */}
+                    <div className="h-64 rounded-2xl overflow-hidden mb-6 relative">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div
+                        className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                        style={{
+                          background: `linear-gradient(135deg, ${member.gradientFrom}, ${member.gradientTo})`
+                        }}
+                      ></div>
+                    </div>
+                    
+                    {/* Content */}
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
+                    <p className="text-sm font-medium" style={{ color: member.gradientFrom }}>
+                      {member.role}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section - Fluent Gradient */}
         <section className="py-20 bg-gradient-to-r from-[#006EE6] via-[#00BEFF] to-[#41FF28] text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
