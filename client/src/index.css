@@ -76,6 +76,13 @@
   --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.623 0.214 259.815);
+  /* Brain Brandbook Colors */
+  --brain-green: #009640;
+  --brain-blue: #009FE3;
+  --brain-yellow: #FFC300;
+  --brain-orange: #FF6B35;
+  --brain-dark: #161616;
+  --brain-white: #FFFFFF;
 }
 
 .dark {
@@ -118,6 +125,7 @@
     @apply border-border outline-ring/50;
   }
   body {
+    font-family: "Exo", sans-serif;
     @apply bg-background text-foreground;
   }
   button:not(:disabled),
