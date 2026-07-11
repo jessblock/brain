@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowRight, Code, Lightbulb, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ProceduralLines from "@/components/ProceduralLines";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -51,7 +52,7 @@ export default function Home() {
               {/* Hero image - Fluent 3D shape */}
               <div className={`relative h-96 transition-all duration-1000 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}>
                 <img 
-                  src="/brain/images/ChatGPTImage13demai.de2026,15_29_02.png" 
+                  src="/manus-storage/hero-connection_69896bf4.png" 
                   alt="Brain Fluent Shape" 
                   className="w-full h-full object-contain drop-shadow-2xl hover:drop-shadow-none transition-all duration-500 animate-bounce"
                   style={{animationDuration: "3s"}}
@@ -116,6 +117,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Procedural Lines Divider */}
+        <ProceduralLines position="bottom" height={100} animated={true} />
+
         {/* Solutions Section - Fluent Cards with Images */}
         <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
           <div className="absolute top-1/2 right-0 w-96 h-96 bg-gradient-to-l from-green-200/20 to-transparent rounded-full blur-3xl -z-10"></div>
@@ -129,21 +133,21 @@ export default function Home() {
                   title: "Fábrica de Software", 
                   desc: "Desenvolvemos soluções tecnológicas customizadas que transformam sua visão em produtos inovadores e escaláveis.",
                   icon: Code,
-                  image: "/brain/images/ChatGPTImage17demai.de2026,17_17_19.png",
+                  image: "/manus-storage/software-factory_b6c97dfb.png",
                   gradient: "from-green-400 to-blue-500"
                 },
                 { 
                   title: "Novos Negócios", 
                   desc: "Identificamos oportunidades de inovação e desenvolvemos estratégias para criar novos modelos de negócio.",
                   icon: Lightbulb,
-                  image: "/brain/images/ChatGPTImage17demai.de2026,18_38_47.png",
+                  image: "/manus-storage/innovation-bulb_db89e0d4.png",
                   gradient: "from-blue-400 to-yellow-500"
                 },
                 { 
                   title: "Consultoria Estratégica", 
                   desc: "Transformamos sua empresa com expertise em inovação, transformação digital e desenvolvimento de novos produtos.",
                   icon: Briefcase,
-                  image: "/brain/images/ChatGPTImage17demai.de2026,15_45_17.png",
+                  image: "/manus-storage/strategy-growth_379de4c6.png",
                   gradient: "from-yellow-400 to-green-500"
                 }
               ].map((solution, idx) => (
