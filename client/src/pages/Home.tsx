@@ -51,7 +51,7 @@ export default function Home() {
               {/* Hero image - Fluent 3D shape */}
               <div className={`relative h-96 transition-all duration-1000 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}>
                 <img 
-                  src="/brain/ChatGPTImage13demai.de2026,15_29_02.png" 
+                  src="/manus-storage/ChatGPTImage13demai.de2026,15_29_02_09cd75c6.png" 
                   alt="Brain Fluent Shape" 
                   className="w-full h-full object-contain drop-shadow-2xl hover:drop-shadow-none transition-all duration-500 animate-bounce"
                   style={{animationDuration: "3s"}}
@@ -129,21 +129,21 @@ export default function Home() {
                   title: "Fábrica de Software", 
                   desc: "Desenvolvemos soluções tecnológicas customizadas que transformam sua visão em produtos inovadores e escaláveis.",
                   icon: Code,
-                  image: "/brain/ChatGPTImage17demai.de2026,17_17_19.png",
+                  image: "/manus-storage/ChatGPTImage17demai.de2026,17_17_19_34d593cd.png",
                   gradient: "from-green-400 to-blue-500"
                 },
                 { 
                   title: "Novos Negócios", 
                   desc: "Identificamos oportunidades de inovação e desenvolvemos estratégias para criar novos modelos de negócio.",
                   icon: Lightbulb,
-                  image: "/brain/ChatGPTImage17demai.de2026,18_38_47.png",
+                  image: "/manus-storage/ChatGPTImage17demai.de2026,18_38_47_71252506.png",
                   gradient: "from-blue-400 to-yellow-500"
                 },
                 { 
                   title: "Consultoria Estratégica", 
                   desc: "Transformamos sua empresa com expertise em inovação, transformação digital e desenvolvimento de novos produtos.",
                   icon: Briefcase,
-                  image: "/brain/ChatGPTImage17demai.de2026,15_45_17.png",
+                  image: "/manus-storage/ChatGPTImage17demai.de2026,15_45_17_f38ce241.png",
                   gradient: "from-yellow-400 to-green-500"
                 }
               ].map((solution, idx) => (
