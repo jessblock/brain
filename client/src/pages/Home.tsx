@@ -29,7 +29,7 @@ export default function Home() {
               <div className={`space-y-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
                 <div>
                   <h1 className="text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-4">
-                    <span className="bg-gradient-to-r from-green-500 via-blue-500 to-yellow-400 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-[#41FF28] via-[#00BEFF] to-[#FFE800] bg-clip-text text-transparent">
                       Conectando
                     </span>
                     <br />
@@ -44,7 +44,7 @@ export default function Home() {
                   Somos o Instituto de Ciência e Tecnologia do Grupo Algar. Aqui nascem grandes ideias e soluções disruptivas que transformam pessoas e organizações.
                 </p>
                 
-                <Button className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-8 py-4 text-lg h-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <Button className="bg-gradient-to-r from-[#41FF28] to-[#00BEFF] hover:from-[#7DFF37] hover:to-[#009FE3] text-gray-900 font-semibold px-8 py-4 text-lg h-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                   Fale com um Especialista <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </div>
@@ -63,7 +63,7 @@ export default function Home() {
         </section>
 
         {/* Metrics Section - Vibrant Gradient with Fluent Cards */}
-        <section className="py-20 bg-gradient-to-r from-green-500 via-blue-500 to-yellow-400 relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-r from-[#41FF28] via-[#00BEFF] to-[#FFE800] relative overflow-hidden">
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-2xl"></div>
@@ -134,21 +134,24 @@ export default function Home() {
                   desc: "Desenvolvemos soluções tecnológicas customizadas que transformam sua visão em produtos inovadores e escaláveis.",
                   icon: Code,
                   image: "/manus-storage/software-factory_b6c97dfb.png",
-                  gradient: "from-green-400 to-blue-500"
+                  gradientFrom: "#41FF28",
+                  gradientTo: "#00BEFF"
                 },
                 { 
                   title: "Novos Negócios", 
                   desc: "Identificamos oportunidades de inovação e desenvolvemos estratégias para criar novos modelos de negócio.",
                   icon: Lightbulb,
                   image: "/manus-storage/innovation-bulb_db89e0d4.png",
-                  gradient: "from-blue-400 to-yellow-500"
+                  gradientFrom: "#FFE800",
+                  gradientTo: "#E8A600"
                 },
                 { 
                   title: "Consultoria Estratégica", 
                   desc: "Transformamos sua empresa com expertise em inovação, transformação digital e desenvolvimento de novos produtos.",
                   icon: Briefcase,
                   image: "/manus-storage/strategy-growth_379de4c6.png",
-                  gradient: "from-yellow-400 to-green-500"
+                  gradientFrom: "#7DFF37",
+                  gradientTo: "#00AA14"
                 }
               ].map((solution, idx) => (
                 <div 
@@ -165,13 +168,23 @@ export default function Home() {
                       alt={solution.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className={`absolute inset-0 bg-gradient-to-br ${solution.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                    <div 
+                      className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+                      style={{
+                        background: `linear-gradient(135deg, ${solution.gradientFrom}, ${solution.gradientTo})`
+                      }}
+                    ></div>
                   </div>
                   
                   {/* Content */}
                   <div className="p-8">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${solution.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                      <solution.icon className="w-8 h-8 text-white" />
+                    <div 
+                      className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+                      style={{
+                        background: `linear-gradient(135deg, ${solution.gradientFrom}, ${solution.gradientTo})`
+                      }}
+                    >
+                      <solution.icon className="w-8 h-8 text-gray-900" />
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>
                     <p className="text-gray-600 leading-relaxed">{solution.desc}</p>
@@ -196,7 +209,7 @@ export default function Home() {
         </section>
 
         {/* CTA Section - Fluent Gradient */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 text-white relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-r from-[#006EE6] via-[#00BEFF] to-[#41FF28] text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
           </div>
